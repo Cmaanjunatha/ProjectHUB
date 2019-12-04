@@ -1,0 +1,7 @@
+Installing Mysql connector Python
+Following steps are taken from pynative.com
+
+
+pip install mysql-connector-python
+
+
