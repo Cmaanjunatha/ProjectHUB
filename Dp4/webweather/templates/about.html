@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<h6>About me</h6>
+
+{% if api %}
+        {% if api == "ERROR" %}
+                There was an Error
+        {% else %}
+
+        lon             :{{ api.coord.lon }},
+        lat             :{{ api.coord.lat }} <br>
+        weather         :{{ api.weather }}<br>
+        main            :{{ api.main }}<br>
+        temp_max        :{{ api.temp_max }}<br>
+        name            :{{ api.name }}<br>
+        wind            :{{ api.wind }}<br>
+
+        {% endif %}
+
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+        {% block content %}
+        <h5>Weather Report</h5>
+        <br/>
+        <form class="contact-form" method="post" action="form_submission">
+            {% csrf_token %}
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                  <input name="city" class="input-standard-grey" type="text" placeholder="city" aria-label="Submit">
+                  <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Submit</button>
+            </div>
+        </form>
+
+        city : {{city}}
+
+        {% endblock %}
+
