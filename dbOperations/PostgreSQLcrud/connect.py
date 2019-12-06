@@ -10,10 +10,10 @@ try:
     cursor = connection.cursor()
     # Print PostgreSQL Connection properties
     print(connection.get_dsn_parameters(), "\n")
-
+    query = 'SELECT * from mobile'
     # Print PostgreSQL version
-    cursor.execute("SELECT version();")
-    record = cursor.fetchone()
+    cursor.execute(query)
+    record = cursor.fetchall()
     print("You are connected to - ", record, "\n")
 
 except (Exception, psycopg2.Error) as error:
